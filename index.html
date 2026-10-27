@@ -6,18 +6,18 @@
 <title>Sild Partners</title>
 <meta name="description" content="Sild Partners finds and opens conversations with partners, sponsors and buyers abroad. Based in Tallinn, Estonia.">
 <style>
-/* Layout: matches Maria's portfolio. Light lilac world, oversized tight headings, stat cards, dark statement band, lilac contact card. Single light theme by choice. */
+/* Layout: follows Maria's portfolio structure in Baltic navy + gold. Light cool world, oversized tight headings, stat cards, dark statement band, lilac contact card. Single light theme by choice. */
 :root {
-  --purple: #C3B1E1;
-  --purple-light: #EEE7F6;
-  --purple-dark: #8064A2;
-  --dark: #1C1A1F;
-  --grey: #68636D;
-  --background: #FAF9F7;
+  --gold: #DCB45A;
+  --gold-soft: #F2E2B4;
+  --navy-light: #E6EBF3;
+  --blue: #1F3A68;
+  --navy: #14213D;
+  --grey: #56607A;
+  --background: #F7F8FA;
   --white: #FFFFFF;
-  --border: #E4DFE8;
-  --on-dark: #D8D3DB;
-  --dark-line: #3C3840;
+  --border: #DFE3EA;
+  --on-dark: #C9D1E0;
   --font: Arial, Helvetica, sans-serif;
   --gutter-l: max(16px, 7vw, env(safe-area-inset-left, 0px));
   --gutter-r: max(16px, 7vw, env(safe-area-inset-right, 0px));
@@ -25,8 +25,8 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font); color: var(--dark); background: var(--background); line-height: 1.6; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--purple-dark); outline-offset: 3px; border-radius: 6px; }
+body { font-family: var(--font); color: var(--navy); background: var(--background); line-height: 1.6; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
 
 /* NAV */
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 101; background: var(--background); }
@@ -34,49 +34,49 @@ nav {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100;
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
   padding-block: 18px; padding-left: var(--gutter-l); padding-right: var(--gutter-r);
-  background: rgba(250,249,247,0.92); backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(228,223,232,0.7);
+  background: rgba(247,248,250,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(223,227,234,0.7);
 }
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--dark); text-decoration: none; }
-.logo svg { width: 30px; height: 16px; flex: none; color: var(--purple-dark); }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--navy); text-decoration: none; }
+.logo svg { width: 30px; height: 16px; flex: none; color: var(--blue); }
 .nav-right { display: flex; align-items: center; gap: 28px; }
 nav ul { list-style: none; display: flex; gap: 28px; }
-nav ul a { text-decoration: none; color: var(--dark); font-size: 14px; }
-nav ul a:hover { color: var(--purple-dark); }
+nav ul a { text-decoration: none; color: var(--navy); font-size: 14px; }
+nav ul a:hover { color: var(--blue); }
 
 /* HERO */
 .hero {
   position: relative; overflow: hidden;
   padding-block: 90px 90px; padding-left: var(--gutter-l); padding-right: var(--gutter-r);
   background:
-    radial-gradient(circle at 85% 25%, rgba(195,177,225,0.45), transparent 28%),
-    radial-gradient(circle at 70% 80%, rgba(238,231,246,0.9), transparent 25%),
+    radial-gradient(circle at 85% 25%, rgba(31,58,104,0.10), transparent 28%),
+    radial-gradient(circle at 70% 80%, rgba(230,235,243,0.9), transparent 25%),
     var(--background);
 }
 .hero-content { max-width: 1200px; position: relative; z-index: 2; }
-.eyebrow, .section-label { color: var(--purple-dark); text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: 700; }
+.eyebrow, .section-label { color: var(--blue); text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: 700; }
 .eyebrow { margin-bottom: 25px; }
 h1 { font-size: clamp(52px, 9vw, 120px); line-height: .9; letter-spacing: -0.055em; margin-bottom: 40px; text-wrap: balance; }
 .highlight { position: relative; z-index: 1; white-space: nowrap; }
 .highlight::after {
   content: ""; position: absolute; left: -7px; right: -7px; bottom: 6px; height: 25%;
-  background: var(--purple); z-index: -1; border-radius: 8px; transform: rotate(-1deg);
+  background: var(--gold); z-index: -1; border-radius: 8px; transform: rotate(-1deg);
 }
 .tagline { font-size: clamp(24px, 3.4vw, 42px); line-height: 1.15; letter-spacing: -0.03em; max-width: 900px; margin-bottom: 22px; text-wrap: balance; }
 .intro { max-width: 680px; font-size: 19px; color: var(--grey); }
-.hero-shape { position: absolute; right: -150px; top: 10%; width: 560px; height: 560px; border-radius: 50%; background: var(--purple-light); opacity: .85; }
-.hero-shape::before { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: var(--purple); left: 70px; bottom: 45px; opacity: .65; }
+.hero-shape { position: absolute; right: -150px; top: 10%; width: 560px; height: 560px; border-radius: 50%; background: var(--navy-light); opacity: .85; }
+.hero-shape::before { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: rgba(31,58,104,.10); left: 70px; bottom: 45px; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .pill-btn {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--dark); color: var(--white); text-decoration: none;
+  background: var(--navy); color: var(--white); text-decoration: none;
   padding: 15px 24px; border-radius: 100px; font-size: 14px; font-weight: 700; transition: transform .2s;
 }
-.pill-btn.ghost { background: transparent; color: var(--dark); border: 1px solid var(--dark); }
+.pill-btn.ghost { background: transparent; color: var(--navy); border: 1px solid var(--navy); }
 .pill-btn:hover { transform: translateY(-2px); }
 
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 55px; }
-.stat { background: rgba(255,255,255,.72); border: 1px solid rgba(228,223,232,.9); border-radius: 18px; padding: 23px; backdrop-filter: blur(8px); min-width: 0; }
+.stat { background: rgba(255,255,255,.72); border: 1px solid rgba(223,227,234,.9); border-radius: 18px; padding: 23px; backdrop-filter: blur(8px); min-width: 0; }
 .stat-number { font-size: clamp(30px, 3.4vw, 44px); font-weight: 700; line-height: 1; letter-spacing: -0.04em; margin-bottom: 9px; font-variant-numeric: tabular-nums; }
 .stat-label { color: var(--grey); font-size: 13px; line-height: 1.35; }
 
@@ -89,7 +89,7 @@ h3 { letter-spacing: -0.02em; text-wrap: balance; }
 /* SERVICES */
 .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; }
 .service { background: var(--white); border: 1px solid var(--border); border-radius: 24px; padding: 36px; display: grid; gap: 14px; align-content: start; min-width: 0; }
-.service .tag { justify-self: start; background: var(--purple-light); color: var(--purple-dark); padding: 7px 13px; border-radius: 100px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+.service .tag { justify-self: start; background: var(--navy-light); color: var(--blue); padding: 7px 13px; border-radius: 100px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
 .service h3 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.1; }
 .service p { color: var(--grey); font-size: 17px; }
 
@@ -97,57 +97,57 @@ h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .case { max-width: 1050px; }
 .case-lead { font-size: clamp(26px, 3.4vw, 42px); line-height: 1.15; letter-spacing: -0.03em; max-width: 900px; margin-bottom: 40px; }
 .funnel { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 35px; }
-.funnel-step { background: var(--purple-light); color: var(--purple-dark); padding: 12px 18px; border-radius: 100px; font-size: 15px; font-weight: 700; }
-.funnel-step b { color: var(--dark); }
+.funnel-step { background: var(--navy-light); color: var(--blue); padding: 12px 18px; border-radius: 100px; font-size: 15px; font-weight: 700; }
+.funnel-step b { color: var(--navy); }
 .funnel-step.first { background: transparent; border: 1px solid var(--border); color: var(--grey); font-weight: 400; }
-.funnel-step.last { background: var(--purple); color: var(--dark); }
-.arrow { color: var(--purple-dark); font-size: 18px; }
+.funnel-step.last { background: var(--gold); color: var(--navy); }
+.arrow { color: var(--blue); font-size: 18px; }
 .case p { color: var(--grey); font-size: 18px; max-width: 850px; margin-bottom: 15px; }
 
 /* STEPS */
 .steps { list-style: none; max-width: 1050px; }
 .steps li { display: grid; grid-template-columns: 70px 1fr; gap: 20px; padding: 32px 0; border-top: 1px solid var(--border); }
 .steps li:last-child { border-bottom: 1px solid var(--border); }
-.steps .n { font-size: 14px; font-weight: 700; color: var(--purple-dark); letter-spacing: 1px; padding-top: 8px; }
+.steps .n { font-size: 14px; font-weight: 700; color: var(--blue); letter-spacing: 1px; padding-top: 8px; }
 .steps li > div { min-width: 0; }
 .steps h3 { font-size: clamp(24px, 3vw, 34px); margin-bottom: 8px; }
 .steps p { color: var(--grey); font-size: 18px; max-width: 760px; }
-.pricing { margin-top: 35px; display: inline-block; background: var(--purple-light); padding: 18px 25px; border-radius: 14px; font-size: 18px; max-width: 100%; }
-.pricing strong { color: var(--purple-dark); }
+.pricing { margin-top: 35px; display: inline-block; background: var(--navy-light); padding: 18px 25px; border-radius: 14px; font-size: 18px; max-width: 100%; }
+.pricing strong { color: var(--blue); }
 
 /* ABOUT */
 .about-highlight { font-size: clamp(26px, 3.6vw, 44px); line-height: 1.15; max-width: 950px; margin-bottom: 35px; letter-spacing: -0.03em; }
 .about p { color: var(--grey); font-size: 18px; max-width: 850px; margin-bottom: 15px; }
 .career { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 30px 0 35px; }
-.career-step { background: var(--purple-light); color: var(--purple-dark); padding: 12px 18px; border-radius: 100px; font-size: 14px; font-weight: 700; }
+.career-step { background: var(--navy-light); color: var(--blue); padding: 12px 18px; border-radius: 100px; font-size: 14px; font-weight: 700; }
 .career-step.first { background: transparent; border: 1px solid var(--border); color: var(--grey); font-weight: 400; }
-.career-step.current { background: var(--purple); color: var(--dark); }
-.project-heading { margin: 45px 0 15px; font-size: 14px; color: var(--purple-dark); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+.career-step.current { background: var(--gold); color: var(--navy); }
+.project-heading { margin: 45px 0 15px; font-size: 14px; color: var(--blue); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
 .project-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 25px; max-width: 900px; }
 .project-list div { padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 16px; min-width: 0; }
 .project-list span { color: var(--grey); }
-.text-link { color: var(--purple-dark); font-weight: 700; }
+.text-link { color: var(--blue); font-weight: 700; }
 
 /* TESTIMONIALS */
 .testimonials { display: grid; gap: 25px; max-width: 1100px; }
 .testimonial { background: var(--white); border: 1px solid var(--border); border-radius: 24px; padding: 42px; }
-.testimonial-label { color: var(--purple-dark); text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 700; margin-bottom: 20px; }
+.testimonial-label { color: var(--blue); text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 700; margin-bottom: 20px; }
 .testimonial-quote { font-size: clamp(21px, 2.4vw, 30px); line-height: 1.22; letter-spacing: -0.02em; margin-bottom: 30px; }
-.testimonial-quote::before { content: "“"; color: var(--purple); font-size: 1.4em; vertical-align: -0.15em; margin-right: 5px; }
+.testimonial-quote::before { content: "“"; color: var(--gold); font-size: 1.4em; vertical-align: -0.15em; margin-right: 5px; }
 .testimonial-person { border-top: 1px solid var(--border); padding-top: 20px; }
 .testimonial-person strong { display: block; font-size: 17px; margin-bottom: 4px; }
 .testimonial-person span { color: var(--grey); font-size: 14px; }
 
 /* STATEMENT */
-.statement { background: var(--dark); color: var(--white); border-top: none; }
-.statement .section-label { color: var(--purple); }
+.statement { background: var(--navy); color: var(--white); border-top: none; }
+.statement .section-label { color: var(--gold); }
 .statement-quote { font-size: clamp(32px, 5vw, 62px); line-height: 1.04; letter-spacing: -0.04em; max-width: 1000px; text-wrap: balance; }
-.statement-quote span { color: var(--purple); }
+.statement-quote span { color: var(--gold); }
 .statement p { margin-top: 35px; font-size: 19px; color: var(--on-dark); max-width: 760px; }
 
 /* CONTACT */
 .cta-wrap { padding-block: 90px 0; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
-.cta { background: var(--purple); border-radius: 30px; padding: 90px 8%; }
+.cta { background: var(--gold-soft); border-radius: 30px; padding: 90px 8%; }
 .cta p { font-size: 20px; max-width: 650px; margin-bottom: 35px; }
 .buttons { display: flex; flex-wrap: wrap; gap: 15px; }
 .contact-plain { margin-top: 25px; font-size: 15px; }
@@ -310,13 +310,13 @@ footer { display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: space-
 
 <section class="statement">
   <div class="section-label">Why Sild</div>
-  <div class="statement-quote">Sild means <span>bridge</span> in Estonian.</div>
-  <p>That's the job: connect organisations that should be working together, and make the first conversation easy.</p>
+  <div class="statement-quote">We don't mind the gap.<br><span>We bridge it.</span></div>
+  <p>Sild means bridge in Estonian. That's the job: connect organisations that should be working together, and make the first conversation easy.</p>
 </section>
 
 <div class="cta-wrap" id="contact">
   <div class="cta">
-    <div class="section-label" style="color:var(--dark)">06 — Let's talk</div>
+    <div class="section-label" style="color:var(--navy)">06 — Let's talk</div>
     <h2>Who do you<br>want to meet?</h2>
     <p>Tell me which countries and what kind of partners. I'll tell you honestly whether I can reach them.</p>
     <div class="buttons">
