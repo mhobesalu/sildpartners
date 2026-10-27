@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sild Partners</title>
+<meta name="description" content="Sild Partners finds and opens conversations with partners, sponsors and buyers abroad. Based in Tallinn, Estonia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: narrow single column, a "bridge" line linking Tallinn to the world in the hero, pipeline figures as the proof */
+:root {
+  --bg: #f6f8f8;
+  --surface: #ffffff;
+  --ink: #12262b;
+  --muted: #4d6268;
+  --line: #d3dee0;
+  --accent: #0e6b74;
+  --accent-ink: #ffffff;
+  --signal: #c98a1b;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a1d; --surface: #13252a; --ink: #e6efef; --muted: #9db2b6;
+    --line: #26414a; --accent: #4cc0c9; --accent-ink: #062226; --signal: #e6ad48;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a1d; --surface: #13252a; --ink: #e6efef; --muted: #9db2b6;
+  --line: #26414a; --accent: #4cc0c9; --accent-ink: #062226; --signal: #e6ad48;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+  margin: 0;
+}
+.wrap {
+  max-width: 64rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.12; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.1rem, 5.2vw, 3.6rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 500; }
+p { margin: 0; max-width: 62ch; }
+.label {
+  font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* header */
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
+.brand { display: flex; align-items: center; gap: 0.6rem; font-family: var(--display); font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+.brand svg { width: 34px; height: 18px; flex: none; }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.lang button {
+  font: 500 0.8rem var(--mono); letter-spacing: 0.06em; padding: 0.35rem 0.75rem;
+  background: transparent; color: var(--muted); border: 0; cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+/* hero */
+.hero .wrap { display: grid; gap: 1.5rem; padding-block: 2.5rem 3rem; }
+.hero p.lead { font-size: 1.2rem; color: var(--muted); }
+.route { width: 100%; max-width: 100%; height: auto; display: block; margin-top: 0.5rem; }
+.route text { font-family: var(--mono); font-size: 11px; fill: var(--muted); letter-spacing: 0.04em; }
+.route .home { fill: var(--accent); }
+.route .arc { stroke: var(--accent); fill: none; stroke-width: 1.5; }
+.route .dot { fill: var(--surface); stroke: var(--accent); stroke-width: 1.5; }
+.route .hub { fill: var(--accent); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  display: inline-block; padding: 0.75rem 1.25rem; border-radius: 6px;
+  font-weight: 600; text-decoration: none; border: 1px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { color: var(--accent); }
+
+section { border-top: 1px solid var(--line); }
+section > .wrap { padding-block: 3rem; display: grid; gap: 1.75rem; }
+
+/* what we do */
+.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.5rem 2rem; }
+.services > div { display: grid; gap: 0.5rem; align-content: start; min-width: 0; }
+.services p { color: var(--muted); }
+
+/* proof */
+.funnel { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.funnel > div { background: var(--surface); padding: 1.25rem; display: grid; gap: 0.25rem; }
+.funnel b { font-family: var(--display); font-size: 2.4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.funnel > div:last-child b { color: var(--signal); }
+.funnel span { color: var(--muted); font-size: 0.95rem; }
+.note { color: var(--muted); }
+
+/* how it works */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0.75rem; counter-increment: s; }
+.steps li::before { content: counter(s); font-family: var(--mono); font-size: 0.85rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 50%; width: 2rem; height: 2rem; display: grid; place-items: center; }
+.steps li > div { min-width: 0; display: grid; gap: 0.25rem; }
+.steps p { color: var(--muted); }
+
+/* about */
+.about { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 2rem; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+.facts li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0.75rem; border-bottom: 1px solid var(--line); padding-bottom: 0.6rem; }
+.facts li > span:last-child { min-width: 0; }
+
+/* contact */
+.contact { background: var(--ink); color: var(--bg); border-top: 0; }
+.contact .label { color: var(--bg); opacity: 0.7; }
+.contact a { color: var(--bg); }
+.contact-lines { display: grid; gap: 0.4rem; font-family: var(--mono); font-size: 1.05rem; }
+footer .wrap { padding-block: 1.5rem; color: var(--muted); font-size: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .route .arc { stroke-dasharray: 600; stroke-dashoffset: 0; animation: draw 1.6s ease-out both; }
+  @keyframes draw { from { stroke-dashoffset: 600; } to { stroke-dashoffset: 0; } }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sild Partners">
+      <svg viewBox="0 0 34 18" aria-hidden="true"><path d="M1 17 Q17 -5 33 17" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M1 17 H33" stroke="currentColor" stroke-width="2.4"/></svg>
+      Sild Partners
+    </a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-et" data-lang="et" aria-pressed="false">ET</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <span class="label" data-i18n="eyebrow">International partner &amp; sponsor outreach · Tallinn</span>
+      <h1 data-i18n="h1">We open doors abroad and book the meetings.</h1>
+      <p class="lead" data-i18n="lead">Sild Partners finds the right partners, sponsors and buyers in other countries, starts the conversation for you, and hands you qualified calls. You only talk to people who want to talk.</p>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:maria@sildpartners.com" data-i18n="cta1">Book a 20-minute intro</a>
+        <a class="btn ghost" href="#proof" data-i18n="cta2">See the results</a>
+      </div>
+      <svg class="route" viewBox="0 0 640 120" role="img" aria-label="Routes from Tallinn to partners abroad">
+        <path class="arc" d="M60 95 Q170 10 290 70"/>
+        <path class="arc" d="M60 95 Q260 -10 440 60"/>
+        <path class="arc" d="M60 95 Q360 -30 600 80"/>
+        <circle class="hub" cx="60" cy="95" r="6"/>
+        <circle class="dot" cx="290" cy="70" r="5"/>
+        <circle class="dot" cx="440" cy="60" r="5"/>
+        <circle class="dot" cx="600" cy="80" r="5"/>
+        <text x="60" y="116" text-anchor="middle" class="home">TALLINN</text>
+        <text x="290" y="92" text-anchor="middle">DE</text>
+        <text x="440" y="82" text-anchor="middle">DK</text>
+        <text x="600" y="102" text-anchor="middle">KR</text>
+      </svg>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <span class="label" data-i18n="svc-eyebrow">What we do</span>
+      <div class="services">
+        <div>
+          <h3 data-i18n="s1-h">Sponsor &amp; exhibitor outreach</h3>
+          <p data-i18n="s1-p">For conferences, fairs and events. We research companies, agencies and institutions abroad that fit your audience and get them talking about booths, sponsorship and delegations.</p>
+        </div>
+        <div>
+          <h3 data-i18n="s2-h">Export partner search</h3>
+          <p data-i18n="s2-p">For Estonian producers going abroad. We find distributors, importers and buyers in your target market and set up first calls with the ones who are interested.</p>
+        </div>
+        <div>
+          <h3 data-i18n="s3-h">Partnership introductions</h3>
+          <p data-i18n="s3-p">For organisations that need a specific partner: an investor network, a university, a trade body. We find the right person and make a warm introduction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <div class="wrap">
+      <span class="label" data-i18n="proof-eyebrow">Recent work · Robotex International</span>
+      <h2 data-i18n="proof-h">Sponsor outreach for a robotics festival, in six weeks</h2>
+      <div class="funnel">
+        <div><b>237</b><span data-i18n="f1">organisations researched and contacted</span></div>
+        <div><b>20+</b><span data-i18n="f2">countries</span></div>
+        <div><b>41</b><span data-i18n="f3">replies (17%)</span></div>
+        <div><b>10</b><span data-i18n="f4">calls with decision-makers</span></div>
+      </div>
+      <p class="note" data-i18n="proof-note">Calls included industry associations, national investment agencies, universities and an embassy. A typical cold outreach campaign gets 1 to 5% replies.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="label" data-i18n="how-eyebrow">How it works</span>
+      <ol class="steps">
+        <li><div><h3 data-i18n="h1-h">Brief</h3><p data-i18n="h1-p">A 30-minute call about who you want to meet, in which countries, and what you can offer them.</p></div></li>
+        <li><div><h3 data-i18n="h2-h">Target list</h3><p data-i18n="h2-p">We build a researched list of organisations and named contacts. You approve it before anything is sent.</p></div></li>
+        <li><div><h3 data-i18n="h3-h">Outreach</h3><p data-i18n="h3-p">Personal messages in English, Estonian or Russian, with follow-ups. Every reply is handled within a day.</p></div></li>
+        <li><div><h3 data-i18n="h4-h">Meetings</h3><p data-i18n="h4-p">Interested contacts land in your calendar with a short note on who they are and what they want.</p></div></li>
+      </ol>
+      <p class="note" data-i18n="pricing">Pricing: a monthly retainer plus a fee per qualified meeting, so you pay mostly for results.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="label" data-i18n="about-eyebrow">Who you work with</span>
+      <div class="about">
+        <div style="display:grid;gap:1rem;min-width:0">
+          <h2>Maria Hobesalu</h2>
+          <p data-i18n="about-p">Eight years in international business development, growing a metals trading company from about $1M to $20M in revenue across Brazil, Israel, Japan, Egypt and Turkey. Before that and alongside, event production for Bolt, Swedbank, Wise and Nortal.</p>
+          <p><a href="https://mhobesalu.github.io/mariahobesalu/" data-i18n="about-link">Full background</a></p>
+        </div>
+        <ul class="facts">
+          <li><span class="label" data-i18n="k1">Based in</span><span data-i18n="v1">Tallinn, Estonia</span></li>
+          <li><span class="label" data-i18n="k2">Languages</span><span data-i18n="v2">English, Estonian, Russian</span></li>
+          <li><span class="label" data-i18n="k3">Markets</span><span data-i18n="v3">Europe, Nordics, Asia, Americas</span></li>
+          <li><span class="label" data-i18n="k4">Company</span><span>LeMonID OÜ</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="label" data-i18n="contact-eyebrow">Contact</span>
+      <h2 data-i18n="contact-h">Tell us who you want to meet.</h2>
+      <div class="contact-lines">
+        <a href="mailto:maria@sildpartners.com">maria@sildpartners.com</a>
+        <a href="tel:+37258262802">+372 5826 2802</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sild Partners · LeMonID OÜ</span>
+    <span data-i18n="foot">Sild means bridge in Estonian.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var et = {
+    "eyebrow": "Rahvusvaheliste partnerite ja sponsorite leidmine · Tallinn",
+    "h1": "Avame uksi välismaal ja lepime kohtumised kokku.",
+    "lead": "Sild Partners leiab teile sobivad partnerid, sponsorid ja ostjad teistest riikidest, alustab teie eest vestlust ning toob teieni kvalifitseeritud kõned. Räägite ainult nendega, kes ise tahavad rääkida.",
+    "cta1": "Broneeri 20-minutiline tutvumiskõne",
+    "cta2": "Vaata tulemusi",
+    "svc-eyebrow": "Mida teeme",
+    "s1-h": "Sponsorid ja eksponendid",
+    "s1-p": "Konverentsidele, messidele ja üritustele. Leiame välismaalt ettevõtted, agentuurid ja asutused, kes sobivad teie publikuga, ning alustame juttu boksidest, sponsorlusest ja delegatsioonidest.",
+    "s2-h": "Ekspordipartnerite otsing",
+    "s2-p": "Eesti tootjatele, kes lähevad välisturule. Leiame sihtturult edasimüüjad, maaletoojad ja ostjad ning lepime huvilistega kokku esimesed kõned.",
+    "s3-h": "Partnerlussidemed",
+    "s3-p": "Organisatsioonidele, kes otsivad konkreetset partnerit: investorite võrgustikku, ülikooli või erialaliitu. Leiame õige inimese ja teeme sooja tutvustuse.",
+    "proof-eyebrow": "Hiljutine töö · Robotex International",
+    "proof-h": "Robootikafestivali sponsorite otsing kuue nädalaga",
+    "f1": "organisatsiooni uuritud ja kontakteeritud",
+    "f2": "riiki",
+    "f3": "vastust (17%)",
+    "f4": "kõnet otsustajatega",
+    "proof-note": "Kõnede seas olid erialaliidud, riiklikud investeeringuagentuurid, ülikoolid ja saatkond. Tavaline külmkampaania saab 1–5% vastuseid.",
+    "how-eyebrow": "Kuidas see käib",
+    "h1-h": "Lähteülesanne",
+    "h1-p": "30-minutiline kõne: keda soovite kohata, millistes riikides ja mida saate neile pakkuda.",
+    "h2-h": "Sihtnimekiri",
+    "h2-p": "Koostame põhjalikult uuritud nimekirja organisatsioonidest ja kontaktisikutest. Te kinnitate selle enne, kui midagi välja saadetakse.",
+    "h3-h": "Pöördumised",
+    "h3-p": "Isiklikud kirjad inglise, eesti või vene keeles koos järelkirjadega. Igale vastusele reageerime ühe päeva jooksul.",
+    "h4-h": "Kohtumised",
+    "h4-p": "Huvitatud kontaktid jõuavad teie kalendrisse koos lühikese ülevaatega, kes nad on ja mida soovivad.",
+    "pricing": "Hind: kuutasu pluss tasu iga kvalifitseeritud kohtumise eest, nii et maksate peamiselt tulemuse eest.",
+    "about-eyebrow": "Kellega koostööd teete",
+    "about-p": "Kaheksa aastat rahvusvahelist äriarendust: metallikaubandusettevõtte käive kasvas umbes 1 miljonilt 20 miljoni dollarini Brasiilias, Iisraelis, Jaapanis, Egiptuses ja Türgis. Lisaks ürituste korraldus Boltile, Swedbankile, Wise'ile ja Nortalile.",
+    "about-link": "Täielik taust",
+    "k1": "Asukoht", "v1": "Tallinn, Eesti",
+    "k2": "Keeled", "v2": "inglise, eesti, vene",
+    "k3": "Turud", "v3": "Euroopa, Põhjamaad, Aasia, Ameerika",
+    "k4": "Ettevõte",
+    "contact-eyebrow": "Kontakt",
+    "contact-h": "Öelge meile, keda soovite kohata.",
+    "foot": "Sild Partners · ühendame Eesti ja maailma."
+  };
+  var nodes = document.querySelectorAll("[data-i18n]");
+  var en = {};
+  nodes.forEach(function (n) { en[n.getAttribute("data-i18n")] = n.innerHTML; });
+  function setLang(lang) {
+    var dict = lang === "et" ? et : en;
+    nodes.forEach(function (n) {
+      var k = n.getAttribute("data-i18n");
+      if (dict[k] !== undefined) n.innerHTML = dict[k];
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    });
+    try { localStorage.setItem("sild-lang", lang); } catch (e) {}
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  });
+  var saved = null;
+  try { saved = localStorage.getItem("sild-lang"); } catch (e) {}
+  if (saved === "et") setLang("et");
+})();
+</script>
+</body>
+</html>
