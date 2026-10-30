@@ -92,6 +92,7 @@ h3 { letter-spacing: -0.02em; text-wrap: balance; }
 .service .tag { justify-self: start; background: var(--navy-light); color: var(--blue); padding: 7px 13px; border-radius: 100px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
 .service h3 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.1; }
 .service p { color: var(--grey); font-size: 17px; }
+.services-pair { grid-template-columns: repeat(2, 1fr); max-width: 800px; }
 .services-sub { font-size: clamp(22px, 2.4vw, 28px); margin: 60px 0 25px; }
 
 /* CASE */
@@ -243,12 +244,7 @@ footer { display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: space-
     </div>
   </div>
   <h3 class="services-sub">Beyond outreach</h3>
-  <div class="services">
-    <div class="service">
-      <span class="tag">Leadership teams</span>
-      <h3>Rethink Day</h3>
-      <p>One focused session to rethink a role, a team set-up or next year's plan. You leave with a one-page plan and a 90-day roadmap.</p>
-    </div>
+  <div class="services services-pair">
     <div class="service">
       <span class="tag">Companies</span>
       <h3>Giving-back strategy</h3>
@@ -297,7 +293,7 @@ footer { display: flex; flex-wrap: wrap; gap: 10px 30px; justify-content: space-
   <div class="team">
     <article class="person">
       <h3 class="person-name">Maria <span class="highlight">Hõbesalu</span></h3>
-      <div class="person-role">Founder · Partnerships, growth &amp; impact strategy</div>
+      <div class="person-role">Founder · Partnerships &amp; impact strategy</div>
       <div class="about-highlight">I've spent my career getting people in different countries to say yes.</div>
       <div class="career">
         <div class="career-step first">Assistant</div><div class="arrow">→</div>
